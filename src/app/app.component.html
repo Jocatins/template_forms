@@ -1,0 +1,11 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <input type="text" name="text" #text="ngModel" required ngModel />
+  <br />
+
+  <span *ngIf="text.invalid && text.touched" class="error"
+    >Input field is required</span
+  >
+  <input type="number" name="number" ngModel />
+  <br />
+  <button type="submit">Submit</button>
+</form>
